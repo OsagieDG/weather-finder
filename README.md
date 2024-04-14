@@ -2,7 +2,9 @@
 An endpoint that efficiently serves secured weather data via gRPC with TLS encryption and also hosts an HTTP router using chi.
 
 ## Generate your own cert.pem and key.pem files with this simple command
-```                 go run /usr/local/go/src/crypto/tls/generate_cert.go        --rsa-bits=2048 --host=localhost
+```
+             go run /usr/local/go/src/crypto/tls
+generate_cert.go        --rsa-bits=2048 --host=localhost
 ```
 
 ## Installing and Running grpcurl command in the terminal
