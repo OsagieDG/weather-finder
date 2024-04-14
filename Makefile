@@ -22,13 +22,10 @@ build: compile
 run:
 	@./bin/app
 
-lint:
-	@golangci-lint run ./...
-
 clean:
 	rm -f $(GO_OUT) $(GRPC_OUT) bin/app
 
-.PHONY: compile build run lint clean
+.PHONY: compile build run clean
 
 
 
