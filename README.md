@@ -1,10 +1,7 @@
 # weather-finder
 gRPC and HTTP endpoints that efficiently serve weather data.
 
-## Generate your own `cert.pem` and `key.pem` files with this simple command
-```
-go run /usr/local/go/src/crypto/tls/generate_cert.go --rsa-bits=2048 --host=localhost
-```
+## Prerequisites
 
 ## Installing and Running grpcurl command in the terminal
 ```
@@ -16,14 +13,12 @@ go run /usr/local/go/src/crypto/tls/generate_cert.go --rsa-bits=2048 --host=loca
                   grpcurl -d '{"city": "Lisbon", "country": "Portugal"}' -import-path . -proto api/v1/weather.proto -cacert tls/cert.pem -servername localhost localhost:50051 weather.v1.WeatherService/GetWeather
 ```
 
-## Automating Program Compilation with a Makefile
-- To generate code from weather.proto file simply use:
-make compile
+### gRPC request and response
+![weather1](https://github.com/osag1e/weather-finder/blob/main/images/weather1.png)
 
-- Build and Run Target with:
+## Generate your own `cert.pem` and `key.pem` files with this simple command
 ```
-make build
-make run 
+go run /usr/local/go/src/crypto/tls/generate_cert.go --rsa-bits=2048 --host=localhost
 ```
 
 ## Project environment variables
@@ -34,8 +29,15 @@ OPENWEATHERMAP_API_KEY=
 OPENWEATHERMAP_API_BASE_URL=
 ```
 
-### gRPC request and response
-![weather1](https://github.com/osag1e/weather-finder/blob/main/images/weather1.png)
+## Automating Program Compilation with a Makefile
+- To generate code from weather.proto file simply use:
+make compile
+
+- Build and Run Target with:
+```
+make build
+make run 
+```
 
 ### http request and response
 ![weather2](https://github.com/osag1e/weather-finder/blob/main/images/weather2.png)
