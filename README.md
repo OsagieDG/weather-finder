@@ -1,8 +1,6 @@
 # weather-finder
 gRPC and HTTP endpoints that efficiently serve weather data.
 
-## Prerequisites
-
 ## Installing and Running grpcurl command in the terminal
 ```
           go install github.com/fullstorydev/grpcurl/cmd/grpcurl@latest
@@ -31,7 +29,7 @@ OPENWEATHERMAP_API_BASE_URL=
 
 ## Automating Program Compilation with a Makefile
 - To generate code from weather.proto file simply use:
-make compile
+-                       make compile
 
 - Build and Run Target with:
 ```
@@ -39,7 +37,7 @@ make build
 make run 
 ```
 
-### http request and response
+## http request and response
 ![weather2](https://github.com/osag1e/weather-finder/blob/main/images/weather2.png)
 
 
