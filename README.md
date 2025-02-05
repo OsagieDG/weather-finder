@@ -4,7 +4,7 @@ gRPC and HTTP endpoints that efficiently serve weather data.
 ## Installing and Running grpcurl command in the terminal
 ```
           go install github.com/fullstorydev/grpcurl/cmd/grpcurl@latest
-          go get github.com/fullstorydev/grpcurl/cmd/grpcurl 
+          go get github.com/fullstorydev/grpcurl/cmd/grpcurl
 ```
 
 ```
@@ -34,11 +34,11 @@ OPENWEATHERMAP_API_BASE_URL=
 - Build and Run Target with:
 ```
 make build
-make run 
+make run
 ```
 
 ### http request and response
-![weather2](https://github.com/osag1e/weather-finder/blob/main/images/weather2.png)
+![weather](https://github.com/osag1e/weather-finder/blob/main/images/weather.png)
 
 
 
