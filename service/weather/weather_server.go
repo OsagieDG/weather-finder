@@ -8,7 +8,7 @@ import (
 	"net/http"
 	"os"
 
-	pb "github.com/osag1e/weather-finder/api/v1"
+	pb "github.com/OsagieDG/weather-finder/api/v1"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 )

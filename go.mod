@@ -1,4 +1,4 @@
-module github.com/osag1e/weather-finder
+module github.com/OsagieDG/weather-finder
 
 go 1.22.2
 
@@ -16,5 +16,3 @@ require (
 	golang.org/x/text v0.14.0 // indirect
 	google.golang.org/genproto/googleapis/rpc v0.0.0-20240314234333-6e1732d8331c // indirect
 )
-
-

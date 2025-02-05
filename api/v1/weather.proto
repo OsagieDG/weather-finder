@@ -2,20 +2,19 @@ syntax = "proto3";
 
 package weather.v1;
 
-option go_package = "github.com/osag1e/api/weather_v1";
+option go_package = "github.com/OsagieDG/api/weather_v1";
 
 service WeatherService {
-    rpc GetWeather(WeatherRequest) returns (WeatherResponse){}
+  rpc GetWeather(WeatherRequest) returns (WeatherResponse) {}
 }
 
 message WeatherRequest {
-    string city = 1;
-    string country = 2;
+  string city = 1;
+  string country = 2;
 }
 
 message WeatherResponse {
-    string location = 1; 
-    string temperature = 2;
-    string conditions = 3;
+  string location = 1;
+  string temperature = 2;
+  string conditions = 3;
 }
-

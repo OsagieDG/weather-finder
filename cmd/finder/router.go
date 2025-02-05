@@ -8,8 +8,9 @@ import (
 	"net/http"
 	"time"
 
+	pb "github.com/OsagieDG/weather-finder/api/v1"
 	"github.com/go-chi/chi/v5"
-	pb "github.com/osag1e/weather-finder/api/v1"
+	"github.com/go-chi/chi/v5/middleware"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials"
 )
@@ -17,7 +18,9 @@ import (
 func weatherRouter(grpcServerAddress string, tlsConfig *tls.Config) *chi.Mux {
 	router := chi.NewRouter()
 
-	// Defining an HTTP handler to handle weather requests with city and country.
+	router.Use(middleware.Logger)
+	router.Use(middleware.Recoverer)
+
 	router.Get("/weather/{city}/{country}", func(w http.ResponseWriter, r *http.Request) {
 		city := chi.URLParam(r, "city")
 		country := chi.URLParam(r, "country")
@@ -46,7 +49,6 @@ func weatherRouter(grpcServerAddress string, tlsConfig *tls.Config) *chi.Mux {
 			return
 		}
 
-		// Extracting the location name from the gRPC response.
 		if err := json.NewEncoder(w).Encode(map[string]interface{}{
 			"Location":    weather.Location,
 			"Temperature": weather.Temperature,
