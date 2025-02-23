@@ -1,5 +1,5 @@
 # weather-finder
-gRPC and HTTP endpoints that efficiently serve weather data.
+gRPC with TLS and HTTP/1.1 endpoints that efficiently serve weather data.
 
 ## Installing and Running grpcurl command in the terminal
 ```
